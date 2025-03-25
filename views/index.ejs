@@ -1,0 +1,21 @@
+<% layout('/layouts/boilerplate') %>
+
+  <body>
+    <h1>All Tasks</h1>
+    <ul>
+      <% for (let allTasks of alltasks) { %>
+        <div class="card mb-3" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title"><%=allTasks.title%></h5>
+            <p class="card-text"><%=allTasks.description%></p>
+            <a href="/tasks/<%=allTasks.id%>" class="btn btn-secondary">View Task</a>
+          </div>
+        </div>
+        <!-- <a href="/tasks/<%=allTasks.id%>"><li><%=allTasks.title%></li></a> -->
+      <% } %>
+    </ul>
+    <!-- <form method="get" action="/tasks/new">
+        <button>Create New Task</button>
+    </form> -->
+  </body>
+</html>
